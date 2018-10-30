@@ -25,11 +25,11 @@ public class HomeController {
 
     @GetMapping("/add")
     public String courseForm(Model model){
-        model.addAttribute("couse", new Course());
+        model.addAttribute("course", new Course());
         return "courseform";
     }
 
-    @PostMapping("process")
+    @PostMapping("/process")
     public String processForm(@Valid Course course, BindingResult result){
         if(result.hasErrors()){
             return "courseform";
