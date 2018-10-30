@@ -7,9 +7,9 @@
 <body>
     <form action="#" th:action="@{/process}"  th:object="${course}" method="post">
         <input type="hidden" th:field="*{id}" />
-        Title: <input type="text" th:field="*{title}" /> <span th:if="${#field.hasErrors('title')}" th:errors="*{title}"></span><br />
+        Title: <input type="text" th:field="*{title}" /> <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></span><br />
         Instructor: <input type="text" th:field="*{instructor}" /> <span th:if="${#fields.hasErrors('instructor')}" th:errors="*{instructor}"></span><br />
-        Description: <textarea  rows="3" th:fields="*{description}" /> <br />
+        Description: <textarea  rows="3" th:field="*{description}" /> <br />
         Credits: <input type="text" th:field="*{credit}"> <span th:if="${#fields.hasErrors('credit')}" th:errors="*{credit}"></span>
         <br />
         <br />
